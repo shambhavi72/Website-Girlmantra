@@ -1,9 +1,7 @@
 # Website-Girlmantra
 
-# Building Websites With HTML, CSS, and JavaScript: Getting Started
 
-
-## Setup
+## Setup Instructions
 
 If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
 
