@@ -1,0 +1,228 @@
+*{
+box-sizing: border-box;
+margin: 0px;
+padding: 0px;
+}
+@font-face {
+font-family: girlmantra-font;
+src: url('ClassicaPro-Regular.ttf');
+}
+@font-face {
+font-family: gradient-text;
+src: url('PresicavRg-Bold.ttf');
+}
+.nav-links li {
+list-style: none;
+}
+
+nav {
+display: flex;
+justify-content: space-around;
+align-items: center;
+min-height: 8vh;
+background-image: linear-gradient(130deg, rgba(255, 238, 151, 0.94), rgba(251, 228, 255, 0.9));
+font-family: girlmantra-font, sans-serif;
+}
+.nav-links a {
+color: rgb(0, 0, 0);
+font-weight: 700;
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+text-decoration: none;
+}
+.nav-links {
+display: flex;
+width: 40%;
+justify-content: space-around;
+}
+
+.burger div{
+width: 25px;
+height: 3px;
+background-color: black;
+margin: 5px;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        background-color: #fddb2f;
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top:0vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.logo {
+display: flex;
+letter-spacing: 1px;
+font-size: 20px;
+font-weight: lighter;
+cursor: pointer;
+}
+.girl img {
+width: 27%;
+z-index: 1;
+display: block;
+position: relative;
+top: 0px;
+left: 0px;
+margin: 0px auto;
+}
+.girl {
+position: relative;
+margin-top: 50px;
+}
+.gradient-girl {
+background-image: linear-gradient(130deg, rgba(255, 238, 151, 0.94), rgba(251, 228, 255, 0.9));
+height: 35vh;
+width: 45vw;
+box-shadow: rgba(238, 101, 58, 0.22) 0px 1px 1px 0px;
+display: block;
+position: relative;
+align-items: center;
+text-align: center;
+border-radius: 20px;
+padding: 40px;
+margin: 0px auto;
+}
+.container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+.card {
+background-color: white;
+width: 300px;
+height: 500px;
+box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+position: relative;
+margin: 50px 30px 30px;
+border-radius: 15px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(238, 238, 238);
+border-image: initial;
+transition: all 0.3s ease-in-out 0s;
+}
+.card:hover{
+cursor: pointer;
+box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+transform: translate3d(0px, -1px, 0px);
+}
+
+.card-image {
+background-color: turquoise;
+height: 290px;
+margin-bottom: 15px;
+background-size: cover;
+border-radius: 15px 15px 0px 0px;
+}
+.card h2 {
+display: block;
+font-size: 1.5em;
+margin-block-start: 0.83em;
+margin-block-end: 0.83em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-weight: bold;
+}
+.card h2 {
+font-family: helvetica, sans-serif;
+margin-left: 20px;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+.card p {
+color: rgb(114, 110, 110);
+font-family: helvetica, sans-serif;
+font-size: min(2.5vw, 2.5vh);
+margin-left: 20px;
+font-weight: 700;
+}
+.gradient-girl div {
+font-family: gradient-text, sans-serif;
+font-size: min(4vw, 4vh);
+justify-content: center;
+padding: 10px;
+}
+.card p {
+display: block;
+}
+.card .footer h6{
+color: rgb(136, 132, 132);
+font-family: helvetica, sans-serif;
+font-size: min(2vw, 2vh);
+margin-left: 20px;
+font-weight: 700;
+}
+.card .footer {
+position: absolute;
+bottom: 0px;
+width: 297px;
+height: 60px;
+border-top: 1px solid lightgrey;
+}
+
+.img-1 {
+background-image: url('https://uploads-ssl.webflow.com/60477c29eca63a8a608adfb0/61828a7365a0bdf9518e36a2_tyler-nix-Pd5bbWoIUis-unsplash%20(1)-p-1080.jpeg');
+}
+.img-2 {
+background-image: url('https://uploads-ssl.webflow.com/60477c29eca63a8a608adfb0/6182357f10541801a015be1c_tommy-cornilleau-lTllMqbQDUA-unsplash.jpg');
+}
+.img-3 {
+background-image: url('https://uploads-ssl.webflow.com/60477c29eca63a8a608adfb0/615d69432a473b893cdad333_inside-weather-kbPZmDxPK9M-unsplash-min-p-800.jpeg');
+}
+.img-4 {
+background-image: url('https://uploads-ssl.webflow.com/60477c29eca63a8a608adfb0/618675572c898c2be8ec1bf4_matteo-di-iorio-VD-Vjc8VmRA-unsplash%20(1)-p-800.jpeg');
+}
+.img-5 {
+background-image: url('https://uploads-ssl.webflow.com/60477c29eca63a8a608adfb0/617bf01c93049a47932f5d9f_all-c-p-800.png');
+}
+.img-6 {
+background-image: url('https://uploads-ssl.webflow.com/60477c29eca63a8a608adfb0/6186853a721ca504391edeb7_rawan-yasser-zQ1ypq-WHzQ-unsplash-min-p-1600.jpeg');
+}
+/*# sourceMappingURL=styles.css.map */
